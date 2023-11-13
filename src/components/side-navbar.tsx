@@ -16,7 +16,7 @@ const SideNavbar: React.FC<SideNav> = ({ name, onClick }) => {
         setRole(auth.checkRole());
     }, []);
     return (
-        <div className="relative w-[50px] h-screen bg-black font-poppins p-4 flex flex-col justify-between px-16">
+        <div className="fixed z-50 w-[50px] h-screen bg-black font-poppins p-4 flex flex-col justify-between px-16">
             <div className="flex flex-col items-center gap-14 text-white text-[15px]">
                 <IoLogoPlaystation className="w-10 h-10 " />
                 <button

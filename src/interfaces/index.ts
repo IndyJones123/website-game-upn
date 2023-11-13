@@ -11,7 +11,7 @@ import { Games, ReturnGame, GameData, GameCard } from "./game";
 import { SideNav, Navbar } from "./nav";
 import { Quests, ReturnQuest, DataQuest } from "./quest";
 import { ReturnUsers, DataUsers, User } from "./users";
-import { Dialogue, ReturnDialogue, gameData } from "./dialogue";
+import { Dialogue, ReturnDialogue, gameData, Prompt } from "./dialogue";
 
 export type {
     AuthLogin,
@@ -36,4 +36,5 @@ export type {
     Dialogue,
     ReturnDialogue,
     gameData,
+    Prompt,
 };

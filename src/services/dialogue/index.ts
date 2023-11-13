@@ -1,6 +1,6 @@
 import { Base } from "@/services/base";
 
-import { Dialogue, ReturnDialogue, gameData } from "@/interfaces";
+import { Dialogue, ReturnDialogue, gameData, Prompt } from "@/interfaces";
 
 export class Dialog extends Base {
     constructor() {
@@ -72,6 +72,27 @@ export class Dialog extends Base {
             throw new Error("Failed to delete quest");
         } else {
             window.location.reload();
+        }
+    }
+
+    async generateOpenAi(prompt: Prompt) {
+        const generate = await fetch(
+            `${this.getBaseUrl()}/api/dialog/openai/generate`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(prompt),
+            }
+        );
+
+        const response = await generate.json();
+
+        if (response.status === false) {
+            throw new Error("Failed to generate quest");
+        } else {
+            return response;
         }
     }
 }

@@ -153,6 +153,7 @@ export default function Home() {
                                     name={game.gameData.name}
                                     link={game.gameData.link}
                                     handleLoading={handleLoading}
+                                    gambar={game.gameData.gambar as string}
                                 />
                             </div>
                         ))}

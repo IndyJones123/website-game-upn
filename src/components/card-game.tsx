@@ -9,15 +9,27 @@ import { GameCard } from "@/interfaces";
 import { Auth } from "@/lib/auth";
 import { useEffect } from "react";
 
-const CardGame: React.FC<GameCard> = ({ name, link, handleLoading }) => {
+const CardGame: React.FC<GameCard> = ({
+    name,
+    link,
+    handleLoading,
+    gambar,
+}) => {
     const [role, setRole] = useState("");
     useEffect(() => {
         const auth = new Auth();
         setRole(auth.checkRole());
     }, []);
+    console.log(gambar);
     return (
         <div className="relative h-[450px] w-[350px] bg-white rounded-xl overflow-hidden">
-            <Image src={Valorant} className="" alt="logo"></Image>
+            <Image
+                src={`https://server.sinarpadu.com/assets/${gambar}`}
+                className=""
+                alt="logo"
+                width={350}
+                height={300}
+            ></Image>
             <div className="absolute bottom-0 bg-[#FF4C29] h-[70px] w-full rounded-b-xl opacity-90"></div>
             <div className="absolute bottom-0 h-[70px] flex items-center justify-between w-full px-7 text-black">
                 <h1 className="font-bold">{name}</h1>

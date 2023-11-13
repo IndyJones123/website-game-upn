@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        domains: ["localhost", "server.sinarpadu.com"],
+        unoptimized: true,
+    },
+    reactStrictMode: true,
+    output: "export",
+    trailingSlash: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

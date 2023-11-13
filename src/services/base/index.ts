@@ -2,7 +2,8 @@ import { Cookie } from "@/lib/cookies";
 import { Cookies } from "@/interfaces";
 
 export class Base {
-    private baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL || "";
+    private baseUrl: string =
+        process.env.NEXT_PUBLIC_BASE_URL_DEV || "http://localhost:5000";
     private cookie = new Cookie();
 
     getBaseUrl(): string {

@@ -53,6 +53,8 @@ export default function Home() {
         setIsLoading(true);
     };
 
+    console.log(data);
+
     return (
         <main className="relative w-screen ">
             {isLoading && (
@@ -142,6 +144,7 @@ export default function Home() {
                                         name={game.gameData.name}
                                         link={game.gameData.link}
                                         handleLoading={handleLoading}
+                                        gambar={game.gameData.gambar as string}
                                     />
                                 </div>
                             ))}

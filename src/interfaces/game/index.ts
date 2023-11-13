@@ -19,6 +19,7 @@ interface GameData {
 interface GameCard {
     name: string;
     link: string;
+    gambar: string;
     handleLoading: () => void;
 }
 
