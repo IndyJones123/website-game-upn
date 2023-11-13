@@ -21,7 +21,6 @@ export default function Users() {
 
         fetchData();
     }, []);
-    console.log(quest);
     return (
         <div
             className={`h-screen w-screen flex items-center bg-[#141414] p-14 text-white relative`}

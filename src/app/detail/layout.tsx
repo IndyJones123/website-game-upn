@@ -4,10 +4,12 @@ import { useSearchParams, usePathname } from "next/navigation";
 import Loading from "@/components/loading";
 
 import { Auth } from "@/lib/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Layout({ children }: { children: React.ReactNode }) {
-    const auth = new Auth();
-    auth.isLogin();
+    useEffect(() => {
+        const auth = new Auth();
+        auth.isLogin();
+    }, []);
     const query = useSearchParams();
     const name = query.get("game");
     const [isLoading, setIsLoading] = useState(false);

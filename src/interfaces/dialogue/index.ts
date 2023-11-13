@@ -16,4 +16,11 @@ interface gameData {
     game: string;
 }
 
-export type { ReturnDialogue, Dialogue, gameData };
+interface Prompt {
+    jumlahParagraf: string;
+    topikAcuan: string;
+    subTopikAcuan: string[];
+    condition: string;
+}
+
+export type { ReturnDialogue, Dialogue, gameData, Prompt };

@@ -2,7 +2,6 @@
 
 import { User } from "@/services/users";
 import { AiFillWindows } from "react-icons/ai";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Game } from "@/services/game";
@@ -38,8 +37,6 @@ export default function Detail() {
             setUsers(res[0].dataUser);
             setQuest(res[0].dataUser.quest);
         }
-
-        Fetch();
     }, []);
 
     return (

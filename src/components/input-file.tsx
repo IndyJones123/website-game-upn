@@ -22,7 +22,7 @@ const InputFile: React.FC<InputHTML> = ({ onChange, name, value }) => {
                     Choose file
                 </label>
                 <label className="text-sm ">
-                    {value ? value : selectedFile}
+                    {value ? (value as string) : (selectedFile as string)}
                 </label>
             </div>
         </div>
